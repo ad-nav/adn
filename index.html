@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Drone Navigation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Github icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1 id="automated-drone"><i class="fa fa-plane" aria-hidden="true"></i> Automated Drone Navigation</h1>
+        <!-- When the width/height gets too small to view, it converts to a mobile friendly UI -->
+        <div class="overlay" id="mobile-menu-content">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!-- Overlay content -->
+            <nav class="overlay-content">
+                <a href="#team" onclick="closeNav()">Info</a>
+                <a href="#first-semester" onclick="closeNav()">Milestones</a>
+                <a href="https://github.com/2D-0309/adn.github.io" target="_blank">View Github</a>
+            </nav>
+        </div>
+        <!-- When the screen is minimized or opened on a mobile device  -->
+        <span id="menu-icon" onclick="openNav()">&#9776;</span>
+        <!-- Animates the opening and closing of the menu icon -->
+        <script>
+            function openNav() {
+                document.getElementById("mobile-menu-content").style.width = "100%";
+            }
+            function closeNav() {
+                document.getElementById("mobile-menu-content").style.width = "0%";
+            }
+        </script>
+        <!-- Navbar tool to jump between section -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="#team">Info</a></li>
+                <li><a href="https://github.com/2D-0309/adn.github.io" target="_blank">Github</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Project Purpose Section -->
+    <div class="img-txt-container">
+        <img src="images/hero2.jpg" alt="picture of a jet">
+        <!-- Mission and goal of the project -->
+        <div class="txt-container">
+            <section class="mission">
+                <h2 class="section-title">Mission Statement</h2>
+                <p> To provide an automated computer controlled flight-traversing drone that 
+                    can travel and land amongst aerial traffic safely and reliably without 
+                    an operator.
+                </p>
+            </section>
+            <section class="mission" id="team">
+                <h2 class="section-title">Project Goal</h2>
+                <p> Our task is to provide automated navigation in the event of a total loss 
+                    of connection with the goal of returning back to designated landing site 
+                    safely while navigating densely populated cities and aerospace.
+                </p>
+            </section>
+        </div>
+    </div>
+    <!-- Team section and faculty -->
+    <div class="team-container">
+        <h2>The Team</h2>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <h4>Faculty Advisor & Client</h4><br>
+                    <p>Dr. Siddhartha Bhattacharyya</p>
+                    <a href="mailto:sbhattacharyya@fit.edu">sbhattacharyya@fit.edu</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h4>Team Members</h4><br>
+                    <div> Patrycja Bachleda </div> <div><a href="mailto:pbachleda2019@my.fit.edu">pbachleda2019@my.fit.edu</a></div>
+                    <div> Michael Gourdine </div> <div> <a href="mailto:mgourdine2019@my.fit.edu">mgourdine2019@my.fit.edu</a></div>
+                    <div> Chinedum Ajabor</div> <div> <a href="mailto:cajabor2018@my.fit.edu">cajabor2018@my.fit.edu</a></div>
+                    <div> Richard Diaz </div> <div> <a href="mailto:rdiaz2020@my.fit.edu">rdiaz2020@my.fit.edu</a></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h4> Graduate Student Advisor</h4><br>
+                    <p> Parth Ganeriwala</p>
+                    <a href="mailto:pganeriwala2022@my.fit.edu">pganeriwala2022@my.fit.edu</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        
+        </div>
+    </div>
+    <!--Services Section-->
+    <div class="semester-container">
+        <div class="column">
+            <h2 id="first-semester">First Semester</h2>
+            <section>
+                <h3>Plan (Sept. 7)</h3>
+                <h4>
+                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vQ9mncjZki-XuLXIr6bdSwp-sU6LAaxyLdEk0m1xVxGn1JHezWTfWT9ji4h6CWh0vVLu2AUAAA1kgdf/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vR-qrxeXTamuqCLwcvje1h8-PHyuCcVxZGsde6JUuHdA3jbTQfGf7tcigPUTojIk6rCOnmaV8YTwXgr/pub" target="_blank">Project Plan</a>
+                </h4>
+            </section>
+            <section>
+                <h3>Milestone #1</h3>
+                <h4>(Oct. 3)</h4>
+            </section>
+            <section>
+                <h3>Milestone #2 (Oct. 31)</h3>
+                <h4>(Oct. 31)</h4>
+            </section>
+            <section>
+                <h3>Milestone #3</h3>
+                <h4>(Nov. 28)</h4>
+            </section>
+        </div>
+        <div class="column">
+            <h2 id="second-semester">Second Semester</h2>
+            <section>
+                <h3>Plan</h3>
+                <h4>(TBD)</h4>
+            </section>
+            <section>
+                <h3>Milestone #4</h3>
+                <h4>(TBD)</h4>
+            </section>
+            <section>
+                <h3>Milestone #5</h3>
+                <h4>(TBD)</h4>
+            </section>
+            <section>
+                <h3>Milestone #6</h3>
+                <h4>(TBD)</h4>
+            </section>
+        </div>
+    </div>
+     <!--Footer Section-->
+    <footer>
+        <a href="https://github.com/2D-0309/adn.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
+        <p class="website-right">&copy; 2022 Automated Drone Navigation <i class="fa fa-plane" aria-hidden="true"></i></p>
+    </footer>  
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Drone Navigation</title>
+    <link rel="stylesheet" href="researchStyles.css" />
+    <!--This is the link to the fontAweomse link API please dont delete-->
+    <script src="https://kit.fontawesome.com/9f6b5672d4.js" crossorigin="anonymous"></script>
+    <!--These are the links to adjust font from font.google API please dont delete-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- This is a container storing links to other pages on the navigation bar containing links to traverse to other pages-->
+        <div class="navbar__container">
+            <!--This is where the logo on the top left is held; href targets the image for now its placeholder is "/" which means the home page-->
+            <a href="https://2d-0309.github.io/adn.github.io/" id="navbar__logo"><i class="fa-solid fa-plane"></i>Automated Drone Navigation</a>
+            <!--When the width/height gets to small the view converts to a mobile friendly userface-->
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!--Menu bar with a unordered list of links to travers to different pages-->
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="https://2d-0309.github.io/adn.github.io/" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://2d-0309.github.io/adn.github.io/research" class="navbar__links">
+                        Related Materials
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="https://2d-0309.github.io/adn.github.io/milestone" class="navbar__links">
+                        Milestones
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!--Hero Section-->
+    <div class="main">
+        <div class ="main__container">
+            <div class="main__content">
+                <h1>Research Material</h1>'
+                <p>The following texts are an accumalation of material gathered throughout the duration of undertaking this project. Providing a central hub of all related documents and articles pertaining to the completion of this Capstone Project.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Research Section-->
+    <div class="research">
+        <h1>Recommended Reading</h1>
+        <div class="research__container">
+            <div class="research__card">
+                <button><a href="https://2d-0309.github.io/adn.github.io/gna.pdf">Explore</a></button>
+            </div>
+            <div class="research__card">
+                <button><a href="https://2d-0309.github.io/adn.github.io/soar.pdf">Explore</a></button><!-- *****Not yet completed; requires PDF of textbook**** -->
+            </div>
+        </div> 
+    </div>
+
+    <!--Footer Section-->
+    <!--Create a container to store foot links-->
+    <div class="footer__container">
+        <!--Create footer link which contain wrappers of individual links items-->
+        <div class="footer__links">
+            <!--Create footer wrapper 1 which contains individual links items to behave modular on site-->
+            <div class="footer__link--wrapper">
+                <!--individual links item -->
+                <div class="footer__link--items">
+                    <h2>Researched Texts</h2>
+                    <a href="https://2d-0309.github.io/adn.github.io/research">Text Materials</a>
+                </div>
+                <!--individual links item -->
+                <div class="footer__link--items">
+                    <h2>Milestones Accomplished</h2>
+                    <a href="https://2d-0309.github.io/adn.github.io/milestone">Milestones</a>
+                </div>
+            </div>
+            <!--Social Media Section-->
+        </div>
+        <div class="social__media">
+            <!--Create footer wrapper which contains individual links items to behave modular on site-->
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="https://2d-0309.github.io/adn.github.io/" id="footer__logo"><i class="fa-solid fa-plane"></i>Automated Drone Navigation</a>
+                </div>
+                <p class="website__right">Automated Drone Navigation 2022. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>     
+</body>
+</html>

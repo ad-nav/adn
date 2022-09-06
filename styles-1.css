@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212529;
+}
+
+header {
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  padding: 1em;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #212529;
+}
+
+h1, h2, h3{
+  color: #f8b800;
+}
+
+/* */
+#navbar ul {
+  padding-right: 3em;
+  list-style-type: none;
+}
+
+#navbar ul li {
+  display: inline;
+}
+
+#navbar ul li:nth-child(1) {
+  padding-right: 1em;
+}
+
+#navbar ul li a {
+  font-size: 1.5rem;
+  padding: 0.3em;
+  color: #dece9c;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  border: 1px solid #a21232;
+  color: #a21232;
+}
+
+/* */
+.img-txt-container {
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.img-txt-container::before {
+  width: 100%;
+  content: "";
+  background-image: url("images/hero2.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .55;
+}
+
+.img-txt-container img {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.txt-container {
+  margin-top: 30%;
+  width: 60%;
+  position: relative;
+  display: block;
+  background-color: #1e2970;
+  justify-content: center;
+  padding: 1em;
+  border: 3px solid #000000;
+  opacity: .75;
+}
+
+section.mission {
+  padding: 2em;
+}
+
+section.mission h2 {
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 0.5em;
+}
+
+section.mission p {
+  color: #f1f1f1
+}
+
+/* Controls the drop down menu */
+.overlay {
+  top: 0;
+  right: 0;
+  width: 0;
+  z-index: 2;
+  height: 100%;
+  position: fixed;
+  opacity: 0.9;
+  background-color: #000000;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+
+/* Text setting inside the overlay content */
+.overlay-content {
+  top: 25%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  display: block;
+  padding: 8px;
+  color: #818181;
+  font-size: 36px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+/* The close button to hide the drop down menu */
+.overlay .closebtn {
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  position: absolute;
+}
+
+/* Highlights the text once hovering */
+.overlay a:hover, 
+.overlay a:focus { 
+  color: #f1f1f1;
+}
+
+/* Hide the menu icon until the UI is needed to fit smaller screen */
+#menu-icon {
+  display: none;
+}
+
+.team-container {
+  margin: 1.5em 1.5em 1.5em 1.5em;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.semester-container{
+  background-color: #343a40;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+}
+
+.semester-container section{
+  background-color: white;
+  margin: 1.5em 1.5em 1.5em 1.5em;
+  padding: 1em;
+}
+
+.semester-container .column{
+  width: 90%;
+}
+
+.column {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #dece9c;
+}
+
+.semester-container h2,
+.team-container h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.footer__container{
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-color: #0e1111;
+}
+
+
+@media screen and (max-width: 1010px) {
+  .column,
+  .row,
+  .img-txt-container,
+  .img-txt-container:before {
+    width: 100%;
+    display: block; /* Stops it from floating */
+    margin-bottom: 20px;
+  }
+
+  .img-txt-container {
+    height: 75vh;
+  }
+
+  #automated-drone {
+    font-size: 18px;
+  }
+    
+  #menu-icon {
+    display: unset;
+    color: #dece9c;
+    font-size: 36px;
+    cursor: pointer;
+  }
+
+  .overlay .closebtn {
+    top: 15px;
+    right: 35px;
+    font-size: 36px;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  .card{
+    display: block;
+  }
+}
