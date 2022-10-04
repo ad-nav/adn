@@ -171,6 +171,11 @@ section.mission p {
   color: rgb(0, 0, 238);
 }
 
+section h4 {
+  display: flex;
+  flex-direction: column;
+}
+
 .column {
   width: 50%;
   padding: 0 10px;
