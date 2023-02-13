@@ -1,103 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Drone Navigation</title>
-    <link rel="stylesheet" href="researchStyles.css" />
-    <!--This is the link to the fontAweomse link API please dont delete-->
-    <script src="https://kit.fontawesome.com/9f6b5672d4.js" crossorigin="anonymous"></script>
-    <!--These are the links to adjust font from font.google API please dont delete-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Title -->
+ <title>Automated Drone Navigation</title>
+ <!-- JQuery CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ <!-- Carousel Effect JQuery -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ <!-- Reloads from start -->
+ <script>history.scrollRestoration = "manual"</script>
+ <!-- Main CSS -->
+  <link rel="stylesheet" href="new.css"/>
+  <link rel="stylesheet" href="researchStyles.css"/>
 </head>
 <body>
-    <nav class="navbar">
-        <!-- This is a container storing links to other pages on the navigation bar containing links to traverse to other pages-->
-        <div class="navbar__container">
-            <!--This is where the logo on the top left is held; href targets the image for now its placeholder is "/" which means the home page-->
-            <a href="https://2d-0309.github.io/adn.github.io/" id="navbar__logo"><i class="fa-solid fa-plane"></i>Automated Drone Navigation</a>
-            <!--When the width/height gets to small the view converts to a mobile friendly userface-->
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <!--Menu bar with a unordered list of links to travers to different pages-->
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="https://2d-0309.github.io/adn.github.io/" class="navbar__links">
-                        Home
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="https://2d-0309.github.io/adn.github.io/research" class="navbar__links">
-                        Related Materials
-                    </a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="https://2d-0309.github.io/adn.github.io/milestone" class="navbar__links">
-                        Milestones
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
-    <!--Hero Section-->
-    <div class="main">
-        <div class ="main__container">
-            <div class="main__content">
-                <h1>Research Material</h1>'
-                <p>The following texts are an accumalation of material gathered throughout the duration of undertaking this project. Providing a central hub of all related documents and articles pertaining to the completion of this Capstone Project.</p>
-            </div>
-        </div>
+  <!-- Navbar Section -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo rotation"><a href=""><i class="fa fa-plane"></i></a></div>
+      <!-- List of options -->
+      <div class="menu-outer" id="menu-outer">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="menu" id="menu-content">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#milestones">Milestone</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="">Reference</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn" onclick="openNav()"><i class="fa fa-bars"></i></div>
     </div>
-
-    <!--Research Section-->
-    <div class="research">
-        <h1>Recommended Reading</h1>
-        <div class="research__container">
-            <div class="research__card">
-                <button><a href="https://2d-0309.github.io/adn.github.io/gna.pdf">Explore</a></button>
-            </div>
-            <div class="research__card">
-                <button><a href="https://2d-0309.github.io/adn.github.io/soar.pdf">Explore</a></button><!-- *****Not yet completed; requires PDF of textbook**** -->
-            </div>
-        </div> 
+  </nav>
+  <!-- Research Section -->
+  <section class="research" id="research">
+    <div class="container">
+      <div class="research-content">
+        <h1 class="main-title">Research Material</h1>
+        <p>The following texts are an accumalation of material gathered throughout the duration of undertaking this project. Providing a central hub of all related documents and articles pertaining to the completion of this Capstone Project.</p>
+      </div>
     </div>
+  </section>
+  <section class="book" id="book">
+    <div class="container">
+      <h2 class="sub-title">Books</h2>
+      <div class="carousel-book owl-carousel content">
+        <div class="card">
+          <div class="box">
+            <div class="col">
+              <img src="./images/soar.jpg"/>
+            </div>
+            <!-- Book Text section -->
+            <div class="col">
+              <h2 class="inner-sub-title">Description</h2>
+              <p class="sub-text">
+                In development for thirty years, Soar is a general cognitive architecture that integrates knowledge-intensive reasoning, reactive execution, hierarchical reasoning, planning, and learning from experience, with the goal of creating a general 
+                computational system that has the same cognitive abilities as humans. In contrast, most AI systems are designed to solve only one type of problem, such as playing chess, searching the Internet, or scheduling aircraft departures. Soar is both a 
+                software system for agent development and a theory of what computational structures are necessary to support human-level agents. Over the years, both software system and theory have evolved. This book offers the definitive presentation of Soar 
+                from theoretical and practical perspectives, providing comprehensive descriptions of fundamental aspects and new components.<br/><br/>
+                The current version of Soar features major extensions, adding reinforcement learning, semantic memory, episodic memory, mental imagery, and an appraisal-based model of emotion. This book describes details of Soar's component memories 
+                and processes and offers demonstrations of individual components, components working in combination, and real-world applications. Beyond these functional considerations, the book also proposes requirements for general cognitive architectures 
+                and explicitly evaluates how well Soar meets those requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="col">
+              <img src="./images/gna.jpg" />
+            </div>
+            <!-- Book Text section -->
+            <div class="col">
+              <h2 class="inner-sub-title">Description</h2>
+              <p class="sub-text">
+                ".... The book is a first class textbook and seems to be indispensable for everybody who has to teach combinatorial optimization. It is very helpful for students, teachers, and researchers in this area. The author finds a striking synthesis of nice 
+                and interesting mathematical results and practical applications. ... the author pays much attention to the inclusion of well-chosen exercises. The reader does not remain helpless; solutions or at least hints are given in the appendix. Except for some 
+                small basic mathematical and algorithmic knowledge the book is self-contained. ..." K.Engel, Mathematical Reviews 2002<br><br>
+                The substantial development effort of this text, involving multiple editions and trailing in the context of various workshops, university courses and seminar series, clearly shows through in this new edition with its clear writing, good organisation, 
+                comprehensive coverage of essential theory, and well-chosen applications. The proofs of important results and the representation of key algorithms in a Pascal-like notation allow this book to be used in a high-level undergraduate or low-level graduate 
+                course on graph theory, combinatorial optimization or computer science algorithms. The well-worked solutions to exercises are a real bonus for self study by students. The book is highly recommended. P .B. Gibbons, Zentralblatt für Mathematik 2005<br><br>
+                Once again, the new edition has been thoroughly revised. In particular, some further material has been added: more on NP-completeness (especially on dominating sets), a section on the Gallai-Edmonds structure theory for matchings, and about a dozen additional exercises
+                – as always, with solutions. Moreover, the section on the 1-factor theorem has been completely rewritten: it now presents a short direct proof for the more general Berge-Tutte formula. Several recent research developments are discussed and quite a few references have been added.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer>
+    <span>
+      &copy; 2022 Automated Drone Navigation<br/><a href="https://github.com/2D-0309/adn.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
+    </span>
+  </footer>
+  <!-- Javascript -->
+  <script>
+    // Toggle menu on mobile or smaller screen
+    /* Open when someone clicks on the span element */
+    function openNav() {
+      document.getElementById("menu-outer").style.height = "100%";
+    }
 
-    <!--Footer Section-->
-    <!--Create a container to store foot links-->
-    <div class="footer__container">
-        <!--Create footer link which contain wrappers of individual links items-->
-        <div class="footer__links">
-            <!--Create footer wrapper 1 which contains individual links items to behave modular on site-->
-            <div class="footer__link--wrapper">
-                <!--individual links item -->
-                <div class="footer__link--items">
-                    <h2>Researched Texts</h2>
-                    <a href="https://2d-0309.github.io/adn.github.io/research">Text Materials</a>
-                </div>
-                <!--individual links item -->
-                <div class="footer__link--items">
-                    <h2>Milestones Accomplished</h2>
-                    <a href="https://2d-0309.github.io/adn.github.io/milestone">Milestones</a>
-                </div>
-            </div>
-            <!--Social Media Section-->
-        </div>
-        <div class="social__media">
-            <!--Create footer wrapper which contains individual links items to behave modular on site-->
-            <div class="social__media--wrap">
-                <div class="footer__logo">
-                    <a href="https://2d-0309.github.io/adn.github.io/" id="footer__logo"><i class="fa-solid fa-plane"></i>Automated Drone Navigation</a>
-                </div>
-                <p class="website__right">Automated Drone Navigation 2022. All Rights Reserved</p>
-            </div>
-        </div>
-    </div>     
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("menu-outer").style.height = "0%";
+    }
+
+   // Trigger on scroll after 20px
+   function scrollHandler() {
+         const element = document.getElementById("navbar");
+
+         if (window.scrollY > 20) {
+           element.classList.add("sticky");
+         } else {
+           element.classList.remove("sticky");
+         }
+     }
+     window.addEventListener("scroll", scrollHandler);
+     window.onbeforeunload = function () {window.scrollTo(0, 0);}
+  </script>
+  <script>
+    $('.carousel-book').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 1,
+            nav: false
+          }
+        }
+    });
+ </script>
 </body>
 </html>
