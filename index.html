@@ -4,370 +4,296 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
     <title>Automated Drone Navigation</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Github icon-->
+    <!-- JQuery CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Carousel Effect JQuery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-</head>
-<body>
-    <header id="header">
-        <h1 id="automated-drone"><i class="fa fa-plane" aria-hidden="true"></i> Automated Drone Navigation</h1>
-        <!-- When the width/height gets too small to view, it converts to a mobile friendly UI -->
-        <div class="overlay" id="mobile-menu-content">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <!-- Overlay content -->
-            <nav class="overlay-content">
-                <a href="#team" onclick="closeNav()">Info</a>
-                <a href="#first-semester" onclick="closeNav()">Milestones</a>
-                <a href="https://ad-nav.github.io/adn/" target="_blank">View Github</a>
-            </nav>
-        </div>
-        <!-- When the screen is minimized or opened on a mobile device  -->
-        <span id="menu-icon" onclick="openNav()">&#9776;</span>
-        <!-- Animates the opening and closing of the menu icon -->
-        <script>
-            function openNav() {
-                document.getElementById("mobile-menu-content").style.width = "100%";
-            }
-            function closeNav() {
-                document.getElementById("mobile-menu-content").style.width = "0%";
-            }
-        </script>
-        <!-- Navbar tool to jump between section -->
-        <nav id="navbar">
-            <ul>
-                <li><a href="#team">Info</a></li>
-                <li><a href="https://github.com/ad-nav/adn" target="_blank">Github</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Project Purpose Section -->
-    <div class="img-txt-container">
-        <img src="images/hero2.jpg" alt="picture of a jet">
-        <!-- Mission and goal of the project -->
-        <div class="txt-container">
-            <section class="mission">
-                <h2 class="section-title">Mission Statement</h2>
-                <p> To provide an automated computer controlled flight-traversing drone that 
-                    can travel and land amongst aerial traffic safely and reliably without 
-                    an operator.
-                </p>
-            </section>
-            <section class="mission" id="team">
-                <h2 class="section-title">Project Goal</h2>
-                <p> Our task is to provide automated navigation in the event of a total loss 
-                    of connection with the goal of returning back to designated landing site 
-                    safely while navigating densely populated cities and aerospace.
-                </p>
-            </section>
-        </div>
-    </div>
-    <!-- Team section and faculty -->
-    <div class="team-container">
-        <h2>The Team</h2>
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h4>Client</h4><br>
-                    <p>Dr. Natasha Neogi</p>
-                    <a href="mailto:natasha.a.neogi@nasa.gov">natasha.a.neogi@nasa.gov</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h4>Faculty Advisor</h4><br>
-                    <p>Dr. Siddhartha Bhattacharyya</p>
-                    <a href="mailto:sbhattacharyya@fit.edu">sbhattacharyya@fit.edu</a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4>Team Members</h4><br>
-                    <div> Patrycja Bachleda </div> <div><a href="mailto:pbachleda2019@my.fit.edu">pbachleda2019@my.fit.edu</a></div>
-                    <div> Michael Gourdine </div> <div> <a href="mailto:mgourdine2019@my.fit.edu">mgourdine2019@my.fit.edu</a></div>
-                    <div> Chinedum Ajabor</div> <div> <a href="mailto:cajabor2018@my.fit.edu">cajabor2018@my.fit.edu</a></div>
-                    <div> Richard Diaz </div> <div> <a href="mailto:rdiaz2020@my.fit.edu">rdiaz2020@my.fit.edu</a></div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4> Graduate Student Advisor</h4><br>
-                    <p> Parth Ganeriwala</p>
-                    <a href="mailto:pganeriwala2022@my.fit.edu">pganeriwala2022@my.fit.edu</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Services Section-->
-    <div class="semester-container">
-        <div class="column">
-            <h2 id="first-semester">First Semester</h2>
-            <section>
-                <h3>Plan (Sept. 7)</h3>
-                <h4>
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vQ9mncjZki-XuLXIr6bdSwp-sU6LAaxyLdEk0m1xVxGn1JHezWTfWT9ji4h6CWh0vVLu2AUAAA1kgdf/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                    <a href="https://drive.google.com/file/d/1tJ-PWEPUJpFy-DZbZ5VC5QdBlv0_aT8T/view?usp=sharing" target="_blank">Project Plan</a>
-                </h4>
-            </section>
-            <section>
-                <h3>Milestone #1 (Oct. 5)</h3>
-                <h4>
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vTcPQVMEdmkylRHvL0Trm1vZ2AASBqeZ8SKVNJ6tE4Xr7QiBKwvYIJ1zMc9beJVOnvlm29Za-Ise9w0/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                    <a href="https://drive.google.com/file/d/1tnhCjfQ_Mi_zt0-j3vRkPCAVghMJwiQZ/view?usp=sharing" target="_blank">Requirement Document</a>
-                    <a href="https://drive.google.com/file/d/17PE4xcNm_Y3njhzUPi1MTzJGjD1VRdGd/view?usp=sharing" target="_blank">Design Document</a>
-                    <a href="https://drive.google.com/file/d/14z8mDTJ1NvkMqAw_sJu98Ius2lD8WlrE/view?usp=sharing" target="_blank">Test Document</a>
-                    <a href="https://docs.google.com/document/d/16C1OYgMlXVw68OPfboLHLnvsBB0haQH_OFqeczfF-kQ/edit?usp=sharing" target="_blank">Progress Report</a>
-                    <a href="https://drive.google.com/file/d/16W257Jh5SOh_Z2tKWAY_uDy8T-IiuotA/view?usp=sharing" target="_blank">Demo</a>
-                </h4>
-            </section>
-            <section>
-                <h3>Milestone #2 (Oct. 31) </h3>
-                <h4>
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vSWgonLzqNKb5Enk_H-gyj6gw6mNWlIdl9RFk9zxq3kl94wwYn-zzcOn8DthRRxKkC_N0cy7Gm5zJFR/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                    <a href="https://drive.google.com/file/d/1SM5fdWrGhiWjPhCXIyqAypvzhrfcs8Ny/view?usp=sharing" target="_blank">Progress Report</a>
-                    <a href="https://drive.google.com/file/d/1ezxWyd2-wJKdT-1d4agnrdhKebSs31Km/view?usp=sharing" target="_blank">Demo</a>
-                </h4>
-            </section>
-            <section>
-                <h3>Milestone #3 (Nov. 28)</h3>
-              <h4>
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vRT692EtqxzngWXRtB-LPhouYS6yFrQsW5P0vsWuI9y8IVOn-yllBXethPEgPJnevAUpz5ojdCYtgDb/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                <a href="https://drive.google.com/file/d/1YWr7l7q5GhttF7qHcq04eD8kYwaC8com/view?usp=sharing" target="_blank">Progress Report</a>
-                <a href="https://drive.google.com/file/d/1R3GkN2zlmx2NLqeW1Qa6ZB1CmNz30hIQ/view?usp=sharing" target="_blank">Demo</a>
-              </h4>
-            </section>
-        </div>
-        <div class="column">
-            <h2 id="second-semester">Second Semester</h2>
-            <section>
-              <h3>Plan (Jan 16)</h3>
-              <h4>
-                <a href="https://drive.google.com/file/d/13qUsLU6VTYZjJcGTGWczW5_BksDnuMaW/view?usp=sharing" target="_blank">Plan</a>
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vSH569i5GjtBJaYTyMylsPyIwCw_AG4JmXak34u0Av01v5jmUNrOa7g-SzDxj9cGRjRbavX0zM3asbp/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-              </h4>
-            </section>
-            <section>
-              <h3>Milestone #4 (Feb 13)</h3>
-              <h4>
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vQnbPQ2l8-u0w0ZUFF44rcD7RFjtOPls2Nb1AfHMkiUUkjSwY8FDcztxtAbGfMry1I9zZLHKhlylC_2/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                <a href="https://drive.google.com/file/d/1YqikRSyRy9IEUoihJE-46P4pYfi9ik08/view?usp=sharing" target="_blank" >Progress Report</a>
-              </h4>
-            </section>
-            <section>
-              <h3>Milestone #5 (Mar 20)</h3>
-              <h4>
-                <a>Poster</a>
-                <a>e-book page</a>
-                <a>Presentation</a>
-                <a>Progress Report</a>
-              </h4>
-            </section>
-            <section>
-              <h3>Milestone #6 (Apr 17)</h3>
-              <h4>
-                <a>User and/or Developer Manual</a>
-                <a>Demo Video</a>
-                <a>Presentation</a>
-                <a>Progress Report</a>
-              </h4>
-            </section>
-        </div>
-    </div>
-     <!--Footer Section-->
-    <footer>
-        <a href="https://github.com/2D-0309/adn.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
-        <p class="website-right">&copy; 2022 Automated Drone Navigation <i class="fa fa-plane" aria-hidden="true"></i></p>
-    </footer>  
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Drone Navigation</title>
+    <!-- Reloads from start -->
+    <script>history.scrollRestoration = "manual"</script>
+    <!-- Main CSS -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- Github icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 <body>
-    <header id="header">
-        <h1 id="automated-drone"><i class="fa fa-plane" aria-hidden="true"></i> Automated Drone Navigation</h1>
-        <!-- When the width/height gets too small to view, it converts to a mobile friendly UI -->
-        <div class="overlay" id="mobile-menu-content">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <!-- Overlay content -->
-            <nav class="overlay-content">
-                <a href="#team" onclick="closeNav()">Info</a>
-                <a href="#first-semester" onclick="closeNav()">Milestones</a>
-                <a href="https://ad-nav.github.io/adn/" target="_blank">View Github</a>
-            </nav>
-        </div>
-        <!-- When the screen is minimized or opened on a mobile device  -->
-        <span id="menu-icon" onclick="openNav()">&#9776;</span>
-        <!-- Animates the opening and closing of the menu icon -->
-        <script>
-            function openNav() {
-                document.getElementById("mobile-menu-content").style.width = "100%";
-            }
-            function closeNav() {
-                document.getElementById("mobile-menu-content").style.width = "0%";
-            }
-        </script>
-        <!-- Navbar tool to jump between section -->
-        <nav id="navbar">
-            <ul>
-                <li><a href="#team">Info</a></li>
-                <li><a href="https://github.com/ad-nav/adn" target="_blank">Github</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Project Purpose Section -->
-    <div class="img-txt-container">
-        <img src="images/hero2.jpg" alt="picture of a jet">
-        <!-- Mission and goal of the project -->
-        <div class="txt-container">
-            <section class="mission">
-                <h2 class="section-title">Mission Statement</h2>
-                <p> To provide an automated computer controlled flight-traversing drone that 
-                    can travel and land amongst aerial traffic safely and reliably without 
-                    an operator.
-                </p>
-            </section>
-            <section class="mission" id="team">
-                <h2 class="section-title">Project Goal</h2>
-                <p> Our task is to provide automated navigation in the event of a total loss 
-                    of connection with the goal of returning back to designated landing site 
-                    safely while navigating densely populated cities and aerospace.
-                </p>
-            </section>
-        </div>
+  <!-- Navbar Section -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo rotation"><a href="new.html"><i class="fa fa-plane"></i></a></div>
+      <!-- List of options -->
+      <div class="menu-outer" id="menu-outer">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="menu" id="menu-content">
+          <li><a href="new.html">Home</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#milestones">Milestone</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="research.html">Reference</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn" onclick="openNav()"><i class="fa fa-bars"></i></div>
     </div>
-    <!-- Team section and faculty -->
-    <div class="team-container">
-        <h2>The Team</h2>
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h4>Client</h4><br>
-                    <p>Dr. Natasha Neogi</p>
-                    <a href="mailto:natasha.a.neogi@nasa.gov">natasha.a.neogi@nasa.gov</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h4>Faculty Advisor</h4><br>
-                    <p>Dr. Siddhartha Bhattacharyya</p>
-                    <a href="mailto:sbhattacharyya@fit.edu">sbhattacharyya@fit.edu</a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4>Team Members</h4><br>
-                    <div> Patrycja Bachleda </div> <div><a href="mailto:pbachleda2019@my.fit.edu">pbachleda2019@my.fit.edu</a></div>
-                    <div> Michael Gourdine </div> <div> <a href="mailto:mgourdine2019@my.fit.edu">mgourdine2019@my.fit.edu</a></div>
-                    <div> Chinedum Ajabor</div> <div> <a href="mailto:cajabor2018@my.fit.edu">cajabor2018@my.fit.edu</a></div>
-                    <div> Richard Diaz </div> <div> <a href="mailto:rdiaz2020@my.fit.edu">rdiaz2020@my.fit.edu</a></div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4> Graduate Student Advisor</h4><br>
-                    <p> Parth Ganeriwala</p>
-                    <a href="mailto:pganeriwala2022@my.fit.edu">pganeriwala2022@my.fit.edu</a>
-                </div>
-            </div>
-        </div>
+  </nav>
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="container">
+      <div class="home-content">
+        <div class="main-title">Automated<br/>Navigation Drone</div>
+      </div>
     </div>
-    <!--Services Section-->
-    <div class="semester-container">
-        <div class="column">
-            <h2 id="first-semester">First Semester</h2>
-            <section>
-                <h3>Plan (Sept. 7)</h3>
-                <h4>
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vQ9mncjZki-XuLXIr6bdSwp-sU6LAaxyLdEk0m1xVxGn1JHezWTfWT9ji4h6CWh0vVLu2AUAAA1kgdf/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                    <a href="https://drive.google.com/file/d/1tJ-PWEPUJpFy-DZbZ5VC5QdBlv0_aT8T/view?usp=sharing" target="_blank">Project Plan</a>
-                </h4>
-            </section>
-            <section>
-                <h3>Milestone #1 (Oct. 5)</h3>
-                <h4>
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vTcPQVMEdmkylRHvL0Trm1vZ2AASBqeZ8SKVNJ6tE4Xr7QiBKwvYIJ1zMc9beJVOnvlm29Za-Ise9w0/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                    <a href="https://drive.google.com/file/d/1tnhCjfQ_Mi_zt0-j3vRkPCAVghMJwiQZ/view?usp=sharing" target="_blank">Requirement Document</a>
-                    <a href="https://drive.google.com/file/d/17PE4xcNm_Y3njhzUPi1MTzJGjD1VRdGd/view?usp=sharing" target="_blank">Design Document</a>
-                    <a href="https://drive.google.com/file/d/14z8mDTJ1NvkMqAw_sJu98Ius2lD8WlrE/view?usp=sharing" target="_blank">Test Document</a>
-                    <a href="https://docs.google.com/document/d/16C1OYgMlXVw68OPfboLHLnvsBB0haQH_OFqeczfF-kQ/edit?usp=sharing" target="_blank">Progress Report</a>
-                    <a href="https://drive.google.com/file/d/16W257Jh5SOh_Z2tKWAY_uDy8T-IiuotA/view?usp=sharing" target="_blank">Demo</a>
-                </h4>
-            </section>
-            <section>
-                <h3>Milestone #2 (Oct. 31) </h3>
-                <h4>
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vSWgonLzqNKb5Enk_H-gyj6gw6mNWlIdl9RFk9zxq3kl94wwYn-zzcOn8DthRRxKkC_N0cy7Gm5zJFR/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                    <a href="https://drive.google.com/file/d/1SM5fdWrGhiWjPhCXIyqAypvzhrfcs8Ny/view?usp=sharing" target="_blank">Progress Report</a>
-                    <a href="https://drive.google.com/file/d/1ezxWyd2-wJKdT-1d4agnrdhKebSs31Km/view?usp=sharing" target="_blank">Demo</a>
-                </h4>
-            </section>
-            <section>
-                <h3>Milestone #3 (Nov. 28)</h3>
-              <h4>
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vRT692EtqxzngWXRtB-LPhouYS6yFrQsW5P0vsWuI9y8IVOn-yllBXethPEgPJnevAUpz5ojdCYtgDb/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                <a href="https://drive.google.com/file/d/1YWr7l7q5GhttF7qHcq04eD8kYwaC8com/view?usp=sharing" target="_blank">Progress Report</a>
-                <a href="https://drive.google.com/file/d/1R3GkN2zlmx2NLqeW1Qa6ZB1CmNz30hIQ/view?usp=sharing" target="_blank">Demo</a>
-              </h4>
-            </section>
+  </section>
+  <!-- Mission section -->
+  <section class="mission" id="mission">
+    <div class="container">
+      <div class="mission-content">
+        <!-- Mission Image section -->
+        <div class="col left">
+          <img src="./images/aw609.jpg" alt="Picture of an AW609 aircraft"/>
         </div>
-        <div class="column">
-            <h2 id="second-semester">Second Semester</h2>
-            <section>
-              <h3>Plan (Jan 16)</h3>
-              <h4>
-                <a href="https://drive.google.com/file/d/13qUsLU6VTYZjJcGTGWczW5_BksDnuMaW/view?usp=sharing" target="_blank">Plan</a>
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vSH569i5GjtBJaYTyMylsPyIwCw_AG4JmXak34u0Av01v5jmUNrOa7g-SzDxj9cGRjRbavX0zM3asbp/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-              </h4>
-            </section>
-            <section>
-              <h3>Milestone #4 (Feb 13)</h3>
-              <h4>
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vQnbPQ2l8-u0w0ZUFF44rcD7RFjtOPls2Nb1AfHMkiUUkjSwY8FDcztxtAbGfMry1I9zZLHKhlylC_2/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a>
-                <a href="https://drive.google.com/file/d/1YqikRSyRy9IEUoihJE-46P4pYfi9ik08/view?usp=sharing" target="_blank" >Progress Report</a>
-              </h4>
-            </section>
-            <section>
-              <h3>Milestone #5 (Mar 20)</h3>
-              <h4>
-                <a>Poster</a>
-                <a>e-book page</a>
-                <a>Presentation</a>
-                <a>Progress Report</a>
-              </h4>
-            </section>
-            <section>
-              <h3>Milestone #6 (Apr 17)</h3>
-              <h4>
-                <a>User and/or Developer Manual</a>
-                <a>Demo Video</a>
-                <a>Presentation</a>
-                <a>Progress Report</a>
-              </h4>
-            </section>
+        <!-- Mission Text section -->
+        <div class="col right">
+          <h2 class="inner-sub-title">Mission</h2>
+          <p class="sub-text">
+            Our mission is to provide an automated computer controlled flight-traversing drone that 
+            can travel and land amongst aerial traffic safely and reliably without 
+            an operator.
+          </p>
         </div>
+      </div>
     </div>
-     <!--Footer Section-->
-    <footer>
-        <a href="https://github.com/2D-0309/adn.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
-        <p class="website-right">&copy; 2022 Automated Drone Navigation <i class="fa fa-plane" aria-hidden="true"></i></p>
-    </footer>  
+  </section>
+   <!-- Milestones Section -->
+  <section class="milestones" id="milestones">
+    <div class="container">
+      <h2 class="sub-title">Milestones</h2>
+      <div class="milestones-content">
+        <div class="carousel owl-carousel col">
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Semester 1</h3>
+              <h3 class="milestone-title">Plan (Sept. 7)</h3>
+              <ul>
+                <li><a href="https://drive.google.com/file/d/1tJ-PWEPUJpFy-DZbZ5VC5QdBlv0_aT8T/view?usp=sharing" target="_blank">Project Plan</a></li>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQ9mncjZki-XuLXIr6bdSwp-sU6LAaxyLdEk0m1xVxGn1JHezWTfWT9ji4h6CWh0vVLu2AUAAA1kgdf/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #1 (Oct. 5)</h3>
+              <ul>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vTcPQVMEdmkylRHvL0Trm1vZ2AASBqeZ8SKVNJ6tE4Xr7QiBKwvYIJ1zMc9beJVOnvlm29Za-Ise9w0/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
+                <li><a href="https://drive.google.com/file/d/1tnhCjfQ_Mi_zt0-j3vRkPCAVghMJwiQZ/view?usp=sharing" target="_blank">Requirement Document</a></li>
+                <li><a href="https://drive.google.com/file/d/17PE4xcNm_Y3njhzUPi1MTzJGjD1VRdGd/view?usp=sharing" target="_blank">Design Document</a></li>
+                <li><a href="https://drive.google.com/file/d/14z8mDTJ1NvkMqAw_sJu98Ius2lD8WlrE/view?usp=sharing" target="_blank">Test Document</a></li>
+                <li><a href="https://docs.google.com/document/d/16C1OYgMlXVw68OPfboLHLnvsBB0haQH_OFqeczfF-kQ/edit?usp=sharing" target="_blank">Progress Report</a></li>
+                <li><a href="https://drive.google.com/file/d/16W257Jh5SOh_Z2tKWAY_uDy8T-IiuotA/view?usp=sharing" target="_blank">Demo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #2 (Oct. 31) </h3>
+              <ul>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSWgonLzqNKb5Enk_H-gyj6gw6mNWlIdl9RFk9zxq3kl94wwYn-zzcOn8DthRRxKkC_N0cy7Gm5zJFR/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
+                <li><a href="https://drive.google.com/file/d/1SM5fdWrGhiWjPhCXIyqAypvzhrfcs8Ny/view?usp=sharing" target="_blank">Progress Report</a></li>
+                <li><a href="https://drive.google.com/file/d/1ezxWyd2-wJKdT-1d4agnrdhKebSs31Km/view?usp=sharing" target="_blank">Demo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #3 (Nov. 28)</h3>
+              <ul>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRT692EtqxzngWXRtB-LPhouYS6yFrQsW5P0vsWuI9y8IVOn-yllBXethPEgPJnevAUpz5ojdCYtgDb/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
+                <li><a href="https://drive.google.com/file/d/1YWr7l7q5GhttF7qHcq04eD8kYwaC8com/view?usp=sharing" target="_blank">Progress Report</a></li>
+                <li><a href="https://drive.google.com/file/d/1R3GkN2zlmx2NLqeW1Qa6ZB1CmNz30hIQ/view?usp=sharing" target="_blank">Demo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel owl-carousel col">
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Semester 2</h3>
+              <h3 class="milestone-title">Plan (Jan. 16)</h3>
+              <ul>
+                <li><a href="https://drive.google.com/file/d/13qUsLU6VTYZjJcGTGWczW5_BksDnuMaW/view?usp=sharing" target="_blank">Project Plan</a></li>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSH569i5GjtBJaYTyMylsPyIwCw_AG4JmXak34u0Av01v5jmUNrOa7g-SzDxj9cGRjRbavX0zM3asbp/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #4 (Feb. 13)</h3>
+              <ul>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQnbPQ2l8-u0w0ZUFF44rcD7RFjtOPls2Nb1AfHMkiUUkjSwY8FDcztxtAbGfMry1I9zZLHKhlylC_2/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
+                <li><a href="https://drive.google.com/file/d/1YqikRSyRy9IEUoihJE-46P4pYfi9ik08/view?usp=sharing" target="_blank" >Progress Report</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #5 (Mar. 20)</h3>
+              <ul>
+                <li><a>Poster</a></li>
+                <li><a>e-book page</a></li>
+                <li><a>Presentation</a></li>
+                <li><a>Progress Report</a></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #6 (Apr. 17)</h3>
+              <ul>
+                <li><a>User and/or Developer Manual</a></li>
+                <li><a>Demo Video</a></li>
+                <li><a>Presentation</a></li>
+                <li><a>Progress Report</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+   <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="sub-title">Contact The Team</h2>
+      <div class="carousel-team owl-carousel">
+        <div class="card">
+          <div class="box">
+            <div class="text">Client</div>
+          <p>Dr. Natasha Neogi</p>
+          <a href="mailto:natasha.a.neogi@nasa.gov">natasha.a.neogi@nasa.gov</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Faculty Advisor</div>
+            <p>Dr. Siddhartha Bhattacharyya</p>
+            <a href="mailto:sbhattacharyya@fit.edu">sbhattacharyya@fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Graduate Student Advisor</div>
+            <p>Parth Ganeriwala</p>
+            <a href="mailto:pganeriwala2022@my.fit.edu">pganeriwala2022@my.fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Developer</div>
+            <p>Chinedum Ajabor</p>
+            <a href="mailto:cajabor2018@my.fit.edu">cajabor2018@my.fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Developer</div>
+            <p>Patrycja Bachleda</p>
+            <a href="mailto:pbachleda2019@my.fit.edu">pbachleda2019@my.fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Developer</div>
+            <p>Richard Diaz</p>
+            <a href="mailto:rdiaz2020@my.fit.edu">rdiaz2020@my.fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Team Leader & Developer</div>
+            <p>Michael Gourdine</p>
+            <a href="mailto:mgourdine2019@my.fit.edu">mgourdine2019@my.fit.edu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer>
+    <span>
+      &copy; 2022 Automated Drone Navigation<br/><a href="https://github.com/2D-0309/adn.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
+    </span>
+  </footer>
+  <!-- Javascript -->
+  <script>
+    // Toggle menu on mobile or smaller screen
+    /* Open when someone clicks on the span element */
+    function openNav() {
+      document.getElementById("menu-outer").style.height = "100%";
+    }
+
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("menu-outer").style.height = "0%";
+    }
+
+   // Trigger on scroll after 20px
+   function scrollHandler() {
+         const element = document.getElementById("navbar");
+
+         if (window.scrollY > 20) {
+           element.classList.add("sticky");
+         } else {
+           element.classList.remove("sticky");
+         }
+     }
+     window.addEventListener("scroll", scrollHandler);
+     window.onbeforeunload = function () {window.scrollTo(0, 0);}
+  </script>
+  <!-- JQuery For team carousel -->
+  <script>
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 1,
+            nav: false
+          }
+        }
+    });
+    $('.carousel-team').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 2,
+            nav: false
+          }
+        }
+    });
+ </script>
 </body>
 </html>

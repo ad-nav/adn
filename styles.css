@@ -1,271 +1,491 @@
-* {
+/* Core Styling */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {scroll-behavior: smooth;}
 body {
-  background-color: #212529;
+  background: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
 }
 
-header {
-  z-index: 1;
-  top: 0;
+/* Other Core Styling */
+section {padding: 100px 0;}
+.container {
   width: 100%;
-  display: flex;
-  position: fixed;
-  padding: 1em;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #212529;
+  margin: auto;
+  padding: 0 65px;
 }
 
-h1, h2, h3{
+.sub-title {
   color: #f8b800;
-}
-
-/* Navbar section */
-#navbar ul {
-  padding-right: 3em;
-  list-style-type: none;
-}
-
-#navbar ul li {
-  display: inline;
-}
-
-#navbar ul li:nth-child(1) {
-  padding-right: 1em;
-}
-
-#navbar ul li a {
-  font-size: 1.5rem;
-  padding: 0.3em;
-  color: #dece9c;
-  text-decoration: none;
-}
-
-#navbar ul li a:hover {
-  border: 1px solid #a21232;
-  color: #a21232;
-}
-
-.img-txt-container {
-  margin-top: 6em;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-.img-txt-container img {
-  width: 100%;
-  opacity: .55;
-}
-
-.txt-container {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 10%;
-  width: 60%;
-  position: absolute;
-  display: block;
-  background-color: #1e2970;
-  justify-content: center;
-  padding: 1.8em;
-  border: 3px solid #000000;
-  opacity: .75;
-}
-
-section.mission {
-  padding: 2em;
-}
-
-section.mission h2 {
-  font-size: 24px;
-  text-align: center;
-  text-decoration: underline;
-  margin-bottom: 0.5em;
-}
-
-section.mission p {
-  color: #f1f1f1
-}
-
-/* Controls the drop down menu */
-.overlay {
-  top: 0;
-  right: 0;
-  width: 0;
-  z-index: 2;
-  height: 100%;
-  position: fixed;
-  opacity: 0.9;
-  background-color: #000000;
-  transition: 0.5s;
-  overflow-x: hidden;
-}
-
-/* Text setting inside the overlay content */
-.overlay-content {
-  top: 25%;
-  width: 100%;
   position: relative;
   text-align: center;
-  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
 }
 
-.overlay a {
-  display: block;
-  padding: 8px;
-  color: #818181;
-  font-size: 36px;
-  transition: 0.3s;
+/* Similar Styling */
+.navbar .container,
+.home .home-content,
+.mission .mission-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .container, .mission 
+.mission-content {flex-wrap: wrap;}
+
+/* Carousel Styling */
+.carousel-team .card,
+.carousel .card {
+  background: #f4ede4;
+  padding: 85px 35px;
+  border: 6px solid #80763c;
+}
+
+.carousel-team .card .box,
+.carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.owl-carousel .owl-stage { display: flex;}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #f8b800 !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+} 
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #f8b800 !important;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  background-color: #000000;
+}
+
+.navbar .container {flex-wrap: wrap;}
+.navbar .logo a {
+  color: #f8b800;
+  font-size: 48px;
+}
+
+.navbar .menu li {
+  display: inline-block;
+  list-style: none;
+}
+
+.navbar .menu li a {
+  position: relative;
+  margin-left: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ececec;
   text-decoration: none;
+  transition: color 0.5s ease-in-out;
 }
 
-/* The close button to hide the drop down menu */
-.overlay .closebtn {
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+.navbar .menu li a:hover::after {width: 100%;}
+.navbar .menu li a::after{
+  content: '';
   position: absolute;
+  background: #f8b800;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
 }
 
-/* Highlights the text once hovering */
-.overlay a:hover, 
-.overlay a:focus { 
-  color: #f1f1f1;
-}
-
-/* Hide the menu icon until the UI is needed to fit smaller screen */
-#menu-icon {
+.navbar .menu-btn {
+  color: #f8b800;
+  font-size: 23px;
+  cursor: pointer;
   display: none;
 }
 
-.team-container {
-  margin: 1.5em 1.5em 1.5em 1.5em;
-  border-radius: 10px;
-  padding: 50px;
+.navbar .closebtn {
+  display: none;
 }
 
-.semester-container{
-  background-color: #343a40;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 50px;
+/* Rotating Icon Styling */
+.rotation:hover {animation: rotation 4s infinite linear;}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
-.semester-container section{
-  background-color: white;
-  margin: 1.5em 1.5em 1.5em 1.5em;
-  padding: 1em;
-}
-
-.semester-container .column{
-  width: 90%;
-}
-
-.semester-container a {
-  padding: 1em;
-  color: rgb(0, 0, 238);
-}
-
-section h4 {
+/* Home Styling */
+.home {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  min-height: 500px;
+  color: #f8b800;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("./images/Tiltrotor_07-2000x1125.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: grayscale(9) opacity(0.8);
+}
+.home .main-title {
+  font-size: 72px;
+  filter: brightness(100%);
 }
 
-.column {
+/* Mission Styling */
+.mission {background: #393e46;}
+.mission .mission-content .left {width: 45%;}
+.mission .mission-content .left img {
+  height: 450px;
+  width: 450px;
+  object-fit: cover;
+  border: 8px solid #393E46;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #f8b800;
+}
+
+.milestones .sub-title::after {
+  content: "Semester 1 & 2";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  padding: 5px;
+  font-size: 20px;
+  color: #F8F0E3;
+  background: #222831;
+  transform: translateX(-50%);
+}
+
+.mission .mission-content .right {
+  width: 55%;
+  color: #ececec;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.mission .mission-content .right .inner-sub-title {
+  color: #f8b800;
+  font-size: 48px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* Milestone Section Styling */
+.milestones .carousel .card {
+  height: 426px;
+}
+
+.milestones {background: #222831;}
+.milestones .milestones-content .col {
+  float: left;
   width: 50%;
-  padding: 0 10px;
+  padding: 0 25px;
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 1em;
-}
-
-/* Clear floats after the columns */
-.row:after {
+.milestones .milestones-content::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 16px;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  background-color: #dece9c;
+.milestones .sub-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180px;
+  height: 4px;
+  background: #F8F0E3;
+  transform: translateX(-50%);
 }
 
-.semester-container h2,
-.team-container h2 {
+.milestones .milestone-title {
+  color: #222831;
+  margin-bottom: 20px;
   text-align: center;
-  padding-bottom: 1rem;
+  font-size: 22px;
 }
 
-footer{
-  padding: 20px;
-  color: #f1f1f1;
-  text-align: center;
-  background-color: #0e1111;
-}
-
-footer a {
-  color: #dece9c;
-  text-decoration: none;
+.milestones ul {list-style: none;}
+.milestones .card ul li {margin-bottom: 12px;}
+.milestones .card ul li a:hover {color: #da5529;}
+.milestones .card ul li a {
   font-size: 18px;
+  color: rgb(20, 20, 156);
+  text-decoration: none;
 }
 
-@media screen and (max-width: 1010px) {
-  .txt-container {
-    opacity: unset;
-    transform: unset;
-    position: unset;
-    margin-top: 0%;
-  }
+/* Contact Styling Section */
+.contact {background: #393E46;}
 
-  .column,
-  .row,
-  .img-txt-container,
-  .img-txt-container img,
-  .txt-container,
-  .semester-container {
-    width: 100%;
-    display: block; /* Stops it from floating */
-    margin-bottom: 20px;
-  }
+.contact .sub-title::after {
+  content: "Who We Are";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  padding: 5px;
+  font-size: 20px;
+  color: #F8F0E3;
+  background: #393E46;
+  transform: translateX(-50%);
+}
+
+.contact .sub-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180px;
+  height: 4px;
+  background: #F8F0E3;
+  transform: translateX(-50%);
+}
+
+.contact .carousel-team .card {
+  text-align: center;
+}
+
+div.text {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+  background: #000000;
+  padding: 20px 23px;
+  text-align: center;
+}
+
+footer span {color: #f8b800;}
+footer span a {
+  text-decoration: none;
+  color: #f8b800;
+}
+
+/* Responsive Styling */
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  .navbar .menu-btn {display: block;}
   
-   #automated-drone {
-    font-size: 18px;
-  }
-    
-  #menu-icon {
-    display: unset;
-    color: #dece9c;
-    font-size: 36px;
-    cursor: pointer;
-  }
-
-  .overlay .closebtn {
-    top: 15px;
-    right: 35px;
-    font-size: 36px;
+  .navbar .menu-outer {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s;
   }
 
-  #navbar {
+  .navbar .menu-outer .menu {
+    top: 25%; 
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .navbar .menu li {display: block;}
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 12px 0;
+    font-weight: 25px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+  }
+
+  .navbar .closebtn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #f8b800;
+  }
+
+  .home .home-img{
     display: none;
   }
 
-  .card{
+  .container {padding: 0 30px;}
+  .home .main-title {font-size: 36px;}
+  .mission .mission-content .col {width: 100%;}
+  .mission .mission-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .mission .mission-content .right {flex: 100%;}
+  .mission .mission-content .right .sub-text {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .mission .mission-content .left img {
+    height: 290px;
+    width: 290px;
+  }
+
+  .milestones .milestones-content .col{
+    width: 100%;
     display: block;
+  }
+
+  .milestones .milestones-content .col:first-child{
+    margin-bottom: 30px;
+  }
+  .milestones .card ul li {text-align: center;}
+
+  .contact .carousel-team .card {
+    padding: 50px 15px;
+  }
+
+  .milestones .sub-title::after,
+  .contact .sub-title::after {
+    font-size: 12px;
+    bottom: -10px;
+  }
+
+  .milestones .sub-title::before,
+  .contact .sub-title::before {
+    height: 3px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+  .home .home-img{
+    max-width: 480px;
+    max-height: 480px;
+    border-radius: 70%;
+  }
+
+  .home .main-title {
+    font-size: 42px;
+  } 
+
+  .mission .mission-content .left img {
+    height: 360px;
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1112px) {
+  .home .main-title {
+    font-size: 46px;
+  }
+
+  .home .home-img{
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 70%;
+  }
+
+  .mission .mission-content .left img {
+    height: 360px;
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1113px) and (max-width: 1366px) {
+  .home .main-title {
+    font-size: 46px;
+  }
+
+  .home .home-img{
+    max-width: 640px;
+    max-height: 640px;
+    border-radius: 70%;
+  }
+}
+
+@media screen and ( height: 600px ){
+  .home .main-title {
+    font-size: 36px;
+  }
+
+  .home .home-img{
+    max-width: 380px;
+    max-height: 380px;
+    border-radius: 70%;
+  }
+
+  .mission .mission-content .left img {
+    height: 260px;
+    width: 260px;
+  }
+  .mission .mission-content .right .sub-text {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .milestones .milestones-content .col{
+    width: 100%;
+    display: block;
+  }
+
+  .milestones .milestones-content .col:first-child{
+    margin-bottom: 30px;
+  }
+
+  .milestones .card ul li {text-align: center;}
+
+  .milestones .sub-title::after {
+    font-size: 12px;
+    bottom: -10px;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .mission .mission-content .left img {
+    height: 540px;
+    width: 540px;
   }
 }
