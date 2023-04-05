@@ -29,9 +29,9 @@
         <ul class="menu" id="menu-content">
           <li><a href="https://ad-nav.github.io/adn/" onclick="closeNav()">Home</a></li>
           <li><a href="#mission" onclick="closeNav()">Mission</a></li>
-          <li><a href="#milestones" onclick="closeNav()">Milestone</a></li>
+          <li><a href="#milestones" onclick="closeNav()">Milestones</a></li>
           <li><a href="#contact" onclick="closeNav()">Contact</a></li>
-          <li><a href="research.html" onclick="closeNav()">Reference</a></li>
+          <li><a href="research.html" onclick="closeNav()">References</a></li>
         </ul>
       </div>
       <div class="menu-btn" onclick="openNav()"><i class="fa fa-bars"></i></div>
@@ -115,23 +115,10 @@
             </div>
           </div>
         </div>
-        <div class="carousel owl-carousel col">
+        <div class="carousel-2 owl-carousel col">
           <div class="card">
             <div class="box">
               <h3 class="milestone-title">Semester 2</h3>
-              <h3 class="milestone-title">Milestone #5 (Mar. 20)</h3>
-              <ul>
-                <li><a href="https://drive.google.com/file/d/1D4zLCgZG52PNmRT_uXYGIV1MEdBAog7n/view?usp=sharing" target="_blank">Poster</a></li>
-                <li><a href="https://drive.google.com/file/d/1QcaVGqOe1lT7eEobnQO6mE5G4qu6A-6R/view?usp=sharing" target="_blank">e-book page</a></li>
-                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vR2nW45H9R_mZaXiokn0VkgRJh47wi18CRbQQhjN12kj7GIgmfTqA4APryey4NotzjzF82-7OVq9fTZ/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
-                <li><a href="https://drive.google.com/file/d/1jNFCbbAIEDgPXG-IxdG5tr9uNZoUs_I8/view?usp=sharing" target="_blank">Progress Report</a></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
               <h3 class="milestone-title">Plan (Jan. 16)</h3>
               <ul>
                 <li><a href="https://drive.google.com/file/d/13qUsLU6VTYZjJcGTGWczW5_BksDnuMaW/view?usp=sharing" target="_blank">Project Plan</a></li>
@@ -150,10 +137,23 @@
           </div>
           <div class="card">
             <div class="box">
+              <h3 class="milestone-title">Milestone #5 (Mar. 20)</h3>
+              <ul>
+                <li><a href="https://drive.google.com/file/d/13OdE-jIgK9yn4EQq-3lQD3jr8sBBeIpR/view?usp=sharing" target="_blank">Poster</a></li>
+                <li><a href="https://drive.google.com/file/d/1QcaVGqOe1lT7eEobnQO6mE5G4qu6A-6R/view?usp=sharing" target="_blank">e-book page</a></li>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vR2nW45H9R_mZaXiokn0VkgRJh47wi18CRbQQhjN12kj7GIgmfTqA4APryey4NotzjzF82-7OVq9fTZ/pub?start=false&loop=false&delayms=3000" target="_blank">Presentation</a></li>
+                <li><a href="https://drive.google.com/file/d/1jNFCbbAIEDgPXG-IxdG5tr9uNZoUs_I8/view?usp=sharing" target="_blank">Progress Report</a></li>
+                <li><a href="https://drive.google.com/file/d/1awDcAo6ZUkFja3Z-XedQQnPw8FjGAZcz/view?usp=sharing" target="_blank"></a></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
               <h3 class="milestone-title">Milestone #6 (Apr. 17)</h3>
               <ul>
                 <li><a>User and/or Developer Manual</a></li>
-                <li><a>Demo Video</a></li>
+                <li><a href="https://drive.google.com/file/d/10uURjos853lfBnumUXCuEWc3FK8LGaM_/view?usp=sharing" target="_blank">Demo Video</a></li>
                 <li><a>Presentation</a></li>
                 <li><a>Progress Report</a></li>
               </ul>
@@ -259,6 +259,27 @@
         loop: false,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 1,
+            nav: false
+          }
+        }
+    });
+    $('.carousel-2').owlCarousel({
+        margin: 20,
+        loop: false,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        startPosition: 2,
         responsive: {
           0:{
             items: 1,

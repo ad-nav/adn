@@ -44,14 +44,16 @@ section {padding: 100px 0;}
 
 /* Carousel Styling */
 .carousel-team .card,
-.carousel .card {
+.carousel .card,
+.carousel-2 .card {
   background: #f4ede4;
   padding: 85px 35px;
   border: 6px solid #80763c;
 }
 
 .carousel-team .card .box,
-.carousel .card .box {
+.carousel .card .box,
+.carousel-2 .card .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,7 +212,8 @@ section {padding: 100px 0;}
 }
 
 /* Milestone Section Styling */
-.milestones .carousel .card {
+.milestones .carousel .card,
+.milestones .carousel-2 .card  {
   height: 426px;
 }
 
